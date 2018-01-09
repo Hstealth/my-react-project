@@ -1,0 +1,55 @@
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 3.125rem;
+  width: 100%;
+  background-color: rgba(255,255,255,.96);
+  border: .03125rem solid #ececec;
+}
+.footer ul {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.footer ul li {
+  display: table-cell;
+  vertical-align: middle;
+}
+.footer ul li a {
+  display: block;
+  color: #c3c7cd;
+  font-size: .75rem;
+  margin-top: .0625rem;
+}
+.footer ul .footer_item_home i {
+  background-image: url(/static/resource/img/home.png);
+}
+.footer ul .footer_item_home_selected i {
+  background-image: url(/static/resource/img/home_s.png);
+}
+
+.footer ul .footer_item_concern i {
+  background-image: url(/static/resource/img/discover.png);
+}
+.footer ul .footer_item_concern_selected i {
+  background-image: url(/static/resource/img/discover_s.png);
+}
+
+.footer ul .footer_item_user i {
+  background-image: url(/static/resource/img/user.png);
+}
+.footer ul .footer_item_user_selected i {
+  background-image: url(/static/resource/img/user_s.png);
+}
+
+.footer ul li i {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 auto;
+  background: no-repeat center center;
+  background-size: cover;
+  margin-bottom: .1875rem;
+}

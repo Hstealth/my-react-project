@@ -1,0 +1,25 @@
+.search{
+  padding: 1.1875rem 1.5rem 0.4375rem;
+  background-color: #f9f9f9;
+}
+
+.search a{
+  display: block;
+  height: 1.875rem;
+  background-color: #eee;
+  font-size: .8125rem;
+  color: #9c9fa1;
+  line-height: 1.875rem;
+  border-radius: .1875rem;
+}
+.search a i{
+  display: inline-block;
+  width: .8125rem;
+  height: .8125rem;
+  margin-left: .8125rem;
+  margin-right: .25rem;
+  vertical-align: -.125rem;
+  background: no-repeat center center;
+  background-size: cover;
+  background-image: url(/static/resource/list/search.png);
+}
