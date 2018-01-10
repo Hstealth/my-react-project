@@ -20,7 +20,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>电影与阅读</title>
-    <script type="text/javascript" src="%PUBLIC_URL%/static/common/zepto.min.js"></script>
+    <!--<script type="text/javascript" src="%PUBLIC_URL%/static/common/zepto.min.js"></script>-->
     <script type="text/javascript">
       ;(function(f,i){var b=i.documentElement;var e=f.navigator.appVersion;var g=e.match(/android/gi);var c=e.match(/iphone/gi);var k=f.devicePixelRatio;var j=1,d=1;if(c){if(k>=3){j=3}else{if(k>=2){j=2}else{j=1}}}else{j=1}d=1/j;var h=i.querySelector('meta[name="viewport"]');if(!h){h=i.createElement("meta");h.setAttribute("name","viewport");if(b.firstElementChild){b.firstElementChild.appendChild(h)}else{var a=i.createElement("div");a.appendChild(h);i.write(a.innerHTML)}}if(j){h.setAttribute("content","initial-scale="+d+", maximum-scale="+d+", minimum-scale="+d+", user-scalable=no");b.style.fontSize=16*j+"px"}window.DPR=j})(window,document);
       if(window.innerWidth/DPR <= 334) {
@@ -36,15 +36,5 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

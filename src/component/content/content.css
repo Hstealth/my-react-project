@@ -1,22 +1,3 @@
-.wrapper{
-  max-widtj: 64rem;
-  margin: 0 auto;
-  margin-bottom: 4.5625rem;
-  overflow: hidden;
-}
-.navbar{
-  border-bottom: .03125rem solid #ececec;
-}
-.navbar li{
-  display: inline-block;
-  height: 2rem;
-  width: 50%;
-  line-height: 2rem;
-  text-align: center;
-}
-.navbar li:first-child{
-  border-bottom: .0625rem solid #000;
-}
 .content{
   padding: 0 1.25rem;
 }

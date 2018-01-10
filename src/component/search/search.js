@@ -7,7 +7,7 @@ const Search = () => (
     <section className='search'>
         <Link to="/">
             <i className='search_icon'></i>
-            &nbsp;请输入电影名/书面等
+            &nbsp;请输入电影名/书名等
         </Link>
     </section>
 );
