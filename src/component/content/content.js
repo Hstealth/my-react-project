@@ -5,10 +5,10 @@ require('./content.css');
 
 const ContentItem = (props) => (
     <div className="house_item">
-        <Link to={props.href}>
+        <Link to={"/details?id="+props.id}>
             <img className="house_item_img" src={props.src} alt=""/>
             <div className="house_item_main">
-                <p className="house_item_title">{props.rentType} . {props.name} {props.room}</p>
+                <p className="house_item_title">{props.title}</p>
                 <p className="house_item_content">{props.houseType} {props.site} {props.area} {props.orientation}</p>
                 <p className="house_item_tag">
 
@@ -32,10 +32,12 @@ class Content extends Component{
                         {props.contentData.map((item,index) => {
                             return(
                                 <ContentItem key={index}
+                                             id={item["id"]}
                                              href={item["alt"]}
+                                             title={item['title']}
                                              src={item["images"]["small"]}
                                              rentType={item["rentType"]}
-                                             title={item['title']}
+                                             
                                              room={item["room"]}
                                              houseType={item["houseType"]}
                                              site={item["site"]}

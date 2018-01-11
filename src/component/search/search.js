@@ -5,10 +5,11 @@ require('./search.css')
 
 const Search = () => (
     <section className='search'>
-        <Link to="/">
-            <i className='search_icon'></i>
-            &nbsp;请输入电影名/书名等
-        </Link>
+        <a>
+            <input type="text" placeholder="&nbsp;电影 / 影人 / 导演"/>
+            <i className="search_icon"></i>
+        </a>
+
     </section>
 );
 

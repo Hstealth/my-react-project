@@ -22,7 +22,7 @@
   max-width:100%;
 }
 .house_item_main{
-  padding-left: 8.75rem;
+  padding-left: 5.75rem;
   position: relative;
   top: -0.125rem;
 }
@@ -32,7 +32,7 @@
   text-overflow: ellipsis;
 }
 .house_item_main .house_item_title{
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height:1.25rem;
   margin-bottom: 0.3125rem;
   white-space: normal;

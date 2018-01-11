@@ -7,13 +7,13 @@ import {changeFooter} from '../../modules/home'
 
 require('./index.css')
 
-class User extends Component{
+class Book extends Component{
 
     render(){
         let props = this.props
         return(
             <div className="wrapper">
-                个人中心
+                好书
 
                 <Footer
                     footer={props.home.footer}
@@ -33,4 +33,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(User);
+)(Book);

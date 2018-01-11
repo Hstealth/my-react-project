@@ -8,15 +8,19 @@ import Search from '../../component/search/search'
 import Footer from '../../component/footer/footer'
 import Content from '../../component/content/content'
 
-import {changeFooter} from '../../modules/home'
-import {getContentData} from '../../modules/home'
+import {
+    changeFooter,
+    getContentData,
+    changeNav
+} from '../../modules/home'
 
 require('./index.css')
+// const cln = require('classnames')
 
 const Banner = (props) => (
     <div>
         <Link to="/">
-            <img src="http://imgsrc.baidu.com/forum/pic/item/cc69f124b899a901dd24ccc01d950a7b0308f589.jpg" alt=""/>
+            <img src="/static/resource/img/banner.jpg" alt=""/>
         </Link>
     </div>
 )
@@ -24,11 +28,11 @@ const Banner = (props) => (
 class Home extends Component{
     constructor(props){
         super(props);
-        this.handleAjax("https://api.douban.com//v2/movie/top250",{"nav":""})
+        this.handleAjax("https://api.douban.com/v2/movie/in_theaters",{"nav":""})
     }
 
 
-    handleAjax=(url,options)=>{
+    handleAjax(url,options){
         let props = this.props
         $.ajax({
             async: false,
@@ -40,10 +44,13 @@ class Home extends Component{
             data:options,
             success: function(result){
                 let contentData = result.subjects
-                console.log(contentData)
                 props.getContentData(contentData)
             }
         })
+    }
+
+    changeNavAction(text){
+        this.props.changeNav(text);
     }
 
     // componentWillMount(){
@@ -71,8 +78,14 @@ class Home extends Component{
                 <Search />
                 <Banner />
                 <div className="navbar">
-                    <li onClick={this.handleAjax("https://api.douban.com//v2/movie/top250")}>电影</li>
-                    <li >图书</li>
+                    <li className={props.home.nav === 0 ? "li_selected" : ""} onClick={()=>{
+                    this.handleAjax("https://api.douban.com/v2/movie/in_theaters")
+                    this.changeNavAction(0)
+                    }}>正在热映</li>
+                    <li className={props.home.nav === 1 ? "li_selected" : ""} onClick={()=>{
+                    this.handleAjax("https://api.douban.com/v2/movie/coming_soon")
+                    this.changeNavAction(1)
+                    }}>即将上映</li>
                 </div>
                 <Content
                     contentData={props.home.contentData}
@@ -90,7 +103,8 @@ const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => bindActionCreators({
     changeFooter,
-    getContentData
+    getContentData,
+    changeNav
 },dispatch);
 
 export default connect(

@@ -14,7 +14,7 @@
   line-height: 2rem;
   text-align: center;
 }
-.navbar li:first-child{
+.navbar .li_selected{
   border-bottom: .0625rem solid #000;
 }
 .content{

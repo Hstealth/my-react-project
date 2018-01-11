@@ -24,10 +24,17 @@
   margin-top: .0625rem;
 }
 .footer ul .footer_item_home i {
-  background-image: url(/static/resource/img/home.png);
+  background-image: url(/static/resource/img/movie.png);
 }
 .footer ul .footer_item_home_selected i {
-  background-image: url(/static/resource/img/home_s.png);
+  background-image: url(/static/resource/img/movie_s.png);
+}
+
+.footer ul .footer_item_book i {
+  background-image: url(/static/resource/img/book.png);
+}
+.footer ul .footer_item_book_selected i {
+  background-image: url(/static/resource/img/book_s.png);
 }
 
 .footer ul .footer_item_concern i {
