@@ -5,7 +5,7 @@
   overflow: hidden;
 }
 .slide {
-  padding-top: 120%;
+  padding-top: 125%;
   position: relative;
   overflow: hidden;
   background-color: #efefef;
@@ -39,7 +39,7 @@
   background-image: url(/static/resource/img/play.png);
 }
 .content{
-  margin-right: 1.5rem;
+  //margin-right: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid #eaeaea;
@@ -76,4 +76,50 @@
 }
 .content_btn .saw{
   float: right;
+}
+.content_padding{
+  padding: 0 1.25rem;
+}
+.snopsis_content{
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.snopsis_casts_title{
+  font-family: simsun;
+  color: #999;
+  font-size: 0.7rem;
+  margin-bottom: .5rem;
+}
+.snopsis_info{
+  font-size: 0.725rem;
+  line-height: 1.5rem;
+}
+.casts_info{
+  margin-top: .825rem;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.casts_item{
+  display: inline-block;
+  width: 4rem;
+  height: 6.5rem;
+  padding-right: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+.casts_item img{
+  width: 4rem;
+  height: 5rem;
+}
+.casts_item p{
+  font-family: simsun;
+  font-size: 0.625rem;
+  white-space: normal;
+  text-align: center;
+}
+.casts_content{
+  margin-bottom: 2rem;
+}
+::-webkit-scrollbar{
+  display: none;
 }

@@ -9,7 +9,7 @@ export const CHANGE_NAV = 'home/CHANGE_NAV'
 //更新state
 const initialState = {
     footer: 0,
-    contentData: [],
+    contentData:[],
     nav: 0
 }
 

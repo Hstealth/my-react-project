@@ -21,7 +21,7 @@
   margin-right: 1rem;
   max-width:100%;
 }
-.house_item_main{
+.house_item .house_item_main{
   padding-left: 5.75rem;
   position: relative;
   top: -0.125rem;
@@ -31,7 +31,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.house_item_main .house_item_title{
+.house_item .house_item_main .house_item_title{
   font-size: 0.875rem;
   line-height:1.25rem;
   margin-bottom: 0.3125rem;
@@ -54,7 +54,7 @@
   height: 1rem;
   margin-bottom: 0.75rem;
 }
-.house_item_tag i{
+.house_item_tag .house_item_tag_content{
   display: inline-block;
   font-size: 0.75rem;
   height: 1rem;

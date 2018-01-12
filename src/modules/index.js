@@ -2,7 +2,9 @@
 //该函数根据state的key去执行相应的子reducer，并将返回结果合并成一个大的state对象
 import { combineReducers } from 'redux'
 import home from './home'
+import details from './details'
 
 export default combineReducers({
-    home
+    home,
+    details
 })

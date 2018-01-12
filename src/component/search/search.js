@@ -1,16 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, {Component} from 'react'
+import $ from 'jquery'
+
 require('./search.css')
 
+class Search extends Component{
 
-const Search = () => (
-    <section className='search'>
-        <a>
-            <input type="text" placeholder="&nbsp;电影 / 影人 / 导演"/>
-            <i className="search_icon"></i>
-        </a>
+    getInput(){
+            let msg = $("#search").val();
+            msg=encodeURI(msg)
+            window.location.href = "/result?msg="+msg
+    }
 
-    </section>
-);
+    render(){
+        return(
+            <section className='search'>
+                <a>
+                    <input type="text" placeholder="&nbsp;电影 / 影人 / 导演"  id="search"/>
+                    <i className="search_icon" onClick={() =>{this.getInput()}}></i>
+                </a>
+
+            </section>
+        )
+    }
+}
 
 export default Search

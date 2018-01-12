@@ -5,7 +5,7 @@ import Discover from '../discover'
 import User from '../user'
 import Book from '../book'
 import Details from '../details'
-
+import Result from '../result'
 
 const App = () => (
         <BrowserRouter>
@@ -15,6 +15,7 @@ const App = () => (
                 <Route exact path="/user" component={User} />
                 <Route exact path="/book" component={Book} />
                 <Route exact path="/details" component={Details} />
+                <Route exact path="/result" component={Result} />
             </div>
         </BrowserRouter>
 );

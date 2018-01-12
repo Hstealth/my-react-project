@@ -1,20 +1,40 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+const cln = require("classnames")
 require('./content.css');
+
+const Tag = (props) => (
+    <i className="house_item_tag_content">{props.name}</i>
+);
 
 const ContentItem = (props) => (
     <div className="house_item">
         <Link to={"/details?id="+props.id}>
             <img className="house_item_img" src={props.src} alt=""/>
-            <div className="house_item_main">
+            <div className={cln("house_item_main")}>
                 <p className="house_item_title">{props.title}</p>
-                <p className="house_item_content">{props.houseType} {props.site} {props.area} {props.orientation}</p>
-                <p className="house_item_tag">
+                <p className="house_item_content">导演：
+                    {props.directors.map((item,key) => {
+                        return(
+                            <i key={key}>{item.name} </i>
+                        )
+                    })}
 
                 </p>
+                <p className="house_item_tag" casts={props.casts}>
+                    {props.casts.map((item,key) => {
+                        return(
+                            <Tag className="house_item_tag_content"
+                                 key={key}
+                                 name={item["name"]}
+                                 href={item["alt"]}
+                            />
+                        )
+                    })}
+                </p>
                 <p className="house_item_bottom">
-                    <span> / 月</span>
+                    <span></span>
                 </p>
             </div>
         </Link>
@@ -23,7 +43,7 @@ const ContentItem = (props) => (
 
 class Content extends Component{
     render(){
-        let props = this.props
+        const props = this.props
         console.log(props.contentData)
         return(
             <div>
@@ -36,8 +56,10 @@ class Content extends Component{
                                              href={item["alt"]}
                                              title={item['title']}
                                              src={item["images"]["small"]}
-                                             rentType={item["rentType"]}
-                                             
+                                             directors={item["directors"]}
+                                             casts={item["casts"]}
+
+
                                              room={item["room"]}
                                              houseType={item["houseType"]}
                                              site={item["site"]}
